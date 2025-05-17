@@ -338,7 +338,7 @@ button:active {
 }
 
 #about .about-content {
-    text-align: left;
+    text-align: center;
     margin-bottom: 20px;
     animation: fadeInRight 2s ease-out;
 }
@@ -544,6 +544,8 @@ button:active {
     transition: ease 0.3s;
 }
 /* EXPERIANCE END *//* Container and Section Styles */
+
+/* start skills */
 #skills {
     background-color: #f9effd; /* Background warna utama */
     padding: 50px 0;
@@ -586,7 +588,7 @@ button:active {
 /* Heading Styles */
 #skills h2 {
     font-size: 2.5em;
-    color: #f5c9d9; /* Warna heading */
+    color: #800083; /* Warna heading */
     text-shadow: 0 0 10px #fde0cc, 0 0 20px #fde0cc, 0 0 30px #fde0cc; /* Efek neon */
     margin-bottom: 40px;
     animation: neon 1.5s infinite alternate;
@@ -747,6 +749,108 @@ td {
     }
 }
 
+/* Start Desain */
+/* Swiper Container Styling */
+.swiper-wrapper {
+    overflow: visible !important;
+  }
+  
+  .swiper {
+    overflow: visible !important;
+  }
+  
+  .swiper-slide {
+    text-align: center;
+    overflow: hidden;
+    padding: 16px;
+    background: linear-gradient(145deg, #fde0cc, #f5c9d9);
+    border-radius: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    cursor: pointer;
+    z-index: 1; /* default */
+  }
+  
+  .swiper-slide:hover {
+    transform: scale(1.1);
+    z-index: 10;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* tambah bayangan agar lebih kelihatan */
+  }
+  
+  
+  
+  /* Gambar Desain */
+  .swiper-slide img {
+    cursor: pointer;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  /* Deskripsi Karya */
+  .swiper-slide p {
+    font-size: 0.95rem;
+    color: #333;
+    margin: 0;
+  }
+  
+  /* Heading Section */
+  #design_portfolio {
+    background-color: #fff6f9;
+    text-align: center;
+    padding: 40px 0;
+    overflow: hidden;
+  }
+  
+  #design_portfolio h2 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    color: #800083;
+  }
+  
+  /* Responsive Container */
+  #design_portfolio .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Lightbox Styles */
+  .lightbox {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    padding-top: 60px;
+  }
+  
+  .lightbox-content {
+    display: block;
+    margin: auto;
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 8px;
+  }
+  
+  .close-lightbox {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+/* ends desain */
+
 
 /* start contact */
 #contact {
@@ -768,14 +872,14 @@ td {
 /* Heading Styles */
 #contact h2 {
     font-size: 2em;
-    color: #fde0cc; /* Warna heading sesuai tema */
+    color: #ff7011; 
     margin-bottom: 20px;
     font-weight: bold;
 }
 
 /* Paragraph Styles */
 #contact p {
-    font-size: 1.1em;
+    font-size: 0.8em;
     color: #333; /* Warna teks */
     margin-bottom: 20px;
 }
@@ -783,10 +887,12 @@ td {
 /* Contact Info Container */
 #contact .contact-info {
     display: flex;
-    flex-wrap: wrap; /* Membuat elemen-elemen wrap secara otomatis jika tidak muat dalam satu baris */
-    justify-content: space-around; /* Menyusun elemen secara horizontal dan meratakan jaraknya */
+    flex-wrap: nowrap; /* Semua item satu baris, tanpa wrap */
+    justify-content: space-between; /* Sebar merata */
     align-items: center;
-    gap: 20px; /* Jarak antar item */
+    gap: 10px; /* Jarak antar item */
+    overflow-x: auto; /* Tambahan agar bisa scroll kalau layar kecil */
+    padding-bottom: 10px; /* Biar gak nempel ke batas bawah */
 }
 
 /* Contact Item Styles */
@@ -795,7 +901,7 @@ td {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    flex-basis: 18%; /* Lebar masing-masing item */
+    flex-basis: 20%; /* Lebar masing-masing item */
     box-sizing: border-box;
 }
 
@@ -813,12 +919,6 @@ td {
     justify-content: center;
     margin: 0;
     gap: 5px; /* Tambahkan jarak antar teks */
-}
-
-#contact .contact-item a span, #contact .contact-item a small {
-    display: inline; /* Tampilkan secara horizontal */
-    font-size: 1em;
-    color: #333;
 }
 
 /* Social Media Links */
